@@ -18,7 +18,10 @@ const Index = () => {
             overflow-hidden whitespace-nowrap mx-auto max-w-[20ch]">
             Neural Matrix AI
           </h1>
-          <p className="text-lg md:text-xl text-matrix-text/80 max-w-2xl mx-auto font-terminal">
+          <p className="text-lg md:text-xl text-matrix-text/80 max-w-2xl mx-auto font-terminal
+            before:content-[''] before:border-r-2 before:border-matrix-primary
+            animate-[typing_4s_steps(60,end)_1.5s_both,blink-caret_0.75s_step-end_infinite]
+            overflow-hidden whitespace-nowrap mx-auto">
             Enter the digital realm where artificial intelligence meets cyberpunk reality.
           </p>
         </div>
