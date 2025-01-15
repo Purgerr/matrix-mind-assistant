@@ -12,7 +12,10 @@ const Index = () => {
       <Navbar />
       <div className="container mx-auto px-4 py-12 pt-24">
         <div className="text-center mb-12 relative z-10">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 text-matrix-primary animate-glow font-terminal">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 text-matrix-primary font-terminal 
+            before:content-[''] before:border-r-2 before:border-matrix-primary
+            animate-[typing_3.5s_steps(20,end),blink-caret_0.75s_step-end_infinite]
+            overflow-hidden whitespace-nowrap mx-auto max-w-[20ch]">
             Neural Matrix AI
           </h1>
           <p className="text-lg md:text-xl text-matrix-text/80 max-w-2xl mx-auto font-terminal">

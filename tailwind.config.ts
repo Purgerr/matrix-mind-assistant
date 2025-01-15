@@ -71,6 +71,14 @@ export default {
           "0%, 100%": { filter: "brightness(100%)" },
           "50%": { filter: "brightness(150%)" },
         },
+        "typing": {
+          "from": { width: "0" },
+          "to": { width: "100%" }
+        },
+        "blink-caret": {
+          "from, to": { borderColor: "transparent" },
+          "50%": { borderColor: "rgb(0, 255, 0)" }
+        }
       },
       animation: {
         "matrix-rain": "matrix-rain 20s linear infinite",
