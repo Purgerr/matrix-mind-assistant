@@ -3,7 +3,7 @@ import MatrixRain from '../components/MatrixRain';
 import ChatInterface from '../components/ChatInterface';
 import Navbar from '../components/Navbar';
 import DexScreenerWidget from '../components/DexScreenerWidget';
-import { X, Telegram } from 'lucide-react';
+import { X, ArrowUp } from 'lucide-react';
 
 const Index = () => {
   return (
@@ -43,9 +43,9 @@ const Index = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="text-matrix-text hover:text-matrix-primary transition-colors"
-              aria-label="Telegram"
+              aria-label="Join our community"
             >
-              <Telegram size={24} />
+              <ArrowUp size={24} />
             </a>
           </div>
         </div>
