@@ -2,6 +2,7 @@ import React from 'react';
 import MatrixRain from '../components/MatrixRain';
 import ChatInterface from '../components/ChatInterface';
 import Navbar from '../components/Navbar';
+import DexScreenerWidget from '../components/DexScreenerWidget';
 
 const Index = () => {
   return (
@@ -17,7 +18,10 @@ const Index = () => {
             Enter the digital realm where artificial intelligence meets cyberpunk reality.
           </p>
         </div>
-        <ChatInterface />
+        <div className="space-y-8">
+          <DexScreenerWidget />
+          <ChatInterface />
+        </div>
       </div>
     </div>
   );
