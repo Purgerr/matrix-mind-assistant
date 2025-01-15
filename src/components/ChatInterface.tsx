@@ -25,8 +25,8 @@ const ChatInterface = () => {
 
   return (
     <div className="relative w-full max-w-2xl mx-auto">
-      {/* Left side terminal text */}
-      <div className="absolute -left-44 top-1/2 -translate-y-1/2 transform rotate-90 space-y-8">
+      {/* Left side terminal texts */}
+      <div className="absolute -left-44 top-1/4 -translate-y-1/2 transform rotate-[60deg] space-y-8">
         <div className="text-matrix-primary/60 font-mono text-sm animate-pulse">
           BACKDOOR_ACCESS::TERMINAL_01
         </div>
@@ -35,13 +35,41 @@ const ChatInterface = () => {
         </div>
       </div>
 
-      {/* Right side terminal text */}
-      <div className="absolute -right-44 top-1/2 -translate-y-1/2 transform -rotate-90 space-y-8">
+      <div className="absolute -left-52 top-3/4 -translate-y-1/2 transform rotate-[60deg] space-y-8">
+        <div className="text-matrix-primary/60 font-mono text-sm animate-glow">
+          SECURITY_BYPASS::INITIATED
+        </div>
+        <div className="text-matrix-primary/60 font-mono text-sm">
+          ENCRYPTION::ENABLED
+        </div>
+      </div>
+
+      {/* Right side terminal texts */}
+      <div className="absolute -right-44 top-1/4 -translate-y-1/2 transform -rotate-[60deg] space-y-8">
         <div className="text-matrix-primary/60 font-mono text-sm animate-pulse">
           MATRIX_TERMINAL::CONNECTED
         </div>
         <div className="text-matrix-primary/60 font-mono text-sm">
           SYSTEM::OPERATIONAL
+        </div>
+      </div>
+
+      <div className="absolute -right-52 top-3/4 -translate-y-1/2 transform -rotate-[60deg] space-y-8">
+        <div className="text-matrix-primary/60 font-mono text-sm animate-glow">
+          QUANTUM_LINK::ESTABLISHED
+        </div>
+        <div className="text-matrix-primary/60 font-mono text-sm">
+          PROTOCOL::ACTIVE
+        </div>
+      </div>
+
+      {/* Top terminal text */}
+      <div className="absolute -top-8 left-1/2 -translate-x-1/2 transform space-x-8 flex">
+        <div className="text-matrix-primary/60 font-mono text-sm animate-pulse">
+          STATUS::ONLINE
+        </div>
+        <div className="text-matrix-primary/60 font-mono text-sm">
+          UPTIME::99.9%
         </div>
       </div>
 
