@@ -24,6 +24,17 @@ const DexScreenerWidget = () => {
     }
   };
 
+  const formatNumber = (num: number) => {
+    if (num >= 1e9) {
+      return `$${(num / 1e9).toFixed(2)}B`;
+    } else if (num >= 1e6) {
+      return `$${(num / 1e6).toFixed(2)}M`;
+    } else if (num >= 1e3) {
+      return `$${(num / 1e3).toFixed(2)}K`;
+    }
+    return `$${num.toFixed(2)}`;
+  };
+
   return (
     <div className="w-full max-w-2xl mx-auto p-4 bg-matrix-dark/80 backdrop-blur-lg rounded-lg border border-matrix-primary/30 shadow-lg">
       <form onSubmit={handleSubmit} className="mb-4">
@@ -57,17 +68,20 @@ const DexScreenerWidget = () => {
           <div className="grid grid-cols-2 gap-4">
             <div className="bg-matrix-dark/50 p-4 rounded-lg">
               <h3 className="text-matrix-primary mb-2">Token Info</h3>
-              <p>Symbol: {pairData.baseToken.symbol}/{pairData.quoteToken.symbol}</p>
               <p>Name: {pairData.baseToken.name}</p>
+              <p>Symbol: {pairData.baseToken.symbol}/{pairData.quoteToken.symbol}</p>
+              <p>Address: {pairData.baseToken.address}</p>
             </div>
             <div className="bg-matrix-dark/50 p-4 rounded-lg">
-              <h3 className="text-matrix-primary mb-2">Price Info</h3>
+              <h3 className="text-matrix-primary mb-2">Market Data</h3>
               <p>Price USD: ${parseFloat(pairData.priceUsd).toFixed(6)}</p>
               <p>24h Change: {pairData.priceChange.h24.toFixed(2)}%</p>
             </div>
             <div className="bg-matrix-dark/50 p-4 rounded-lg">
-              <h3 className="text-matrix-primary mb-2">Volume (24h)</h3>
-              <p>${pairData.volume.h24.toFixed(2)}</p>
+              <h3 className="text-matrix-primary mb-2">Market Cap & Volume</h3>
+              <p>Market Cap: {formatNumber(pairData.marketCap || 0)}</p>
+              <p>FDV: {formatNumber(pairData.fdv || 0)}</p>
+              <p>24h Volume: {formatNumber(pairData.volume.h24)}</p>
             </div>
             <div className="bg-matrix-dark/50 p-4 rounded-lg">
               <h3 className="text-matrix-primary mb-2">Transactions (24h)</h3>

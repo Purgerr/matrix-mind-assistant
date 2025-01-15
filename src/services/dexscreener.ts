@@ -27,6 +27,8 @@ export interface DexScreenerPair {
   priceChange: {
     h24: number;
   };
+  fdv: number; // Fully Diluted Valuation
+  marketCap: number;
 }
 
 export const fetchPairData = async (pairAddress: string): Promise<DexScreenerPair | null> => {
