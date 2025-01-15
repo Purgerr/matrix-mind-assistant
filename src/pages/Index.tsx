@@ -1,12 +1,14 @@
 import React from 'react';
 import MatrixRain from '../components/MatrixRain';
 import ChatInterface from '../components/ChatInterface';
+import Navbar from '../components/Navbar';
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-matrix-dark text-matrix-text">
       <MatrixRain />
-      <div className="container mx-auto px-4 py-12">
+      <Navbar />
+      <div className="container mx-auto px-4 py-12 pt-24">
         <div className="text-center mb-12 relative z-10">
           <h1 className="text-4xl md:text-6xl font-bold mb-4 text-matrix-primary animate-glow">
             Neural Matrix AI
