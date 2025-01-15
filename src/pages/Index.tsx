@@ -3,10 +3,11 @@ import MatrixRain from '../components/MatrixRain';
 import ChatInterface from '../components/ChatInterface';
 import Navbar from '../components/Navbar';
 import DexScreenerWidget from '../components/DexScreenerWidget';
+import { X, Telegram } from 'lucide-react';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-matrix-dark text-matrix-text font-terminal">
+    <div className="min-h-screen bg-matrix-dark text-matrix-text font-terminal relative">
       <MatrixRain />
       <Navbar />
       <div className="container mx-auto px-4 py-12 pt-24">
@@ -23,6 +24,32 @@ const Index = () => {
           <ChatInterface />
         </div>
       </div>
+      
+      {/* Footer */}
+      <footer className="relative z-10 py-8 mt-16 border-t border-matrix-primary/20">
+        <div className="container mx-auto px-4">
+          <div className="flex justify-center space-x-6">
+            <a
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-matrix-text hover:text-matrix-primary transition-colors"
+              aria-label="X (Twitter)"
+            >
+              <X size={24} />
+            </a>
+            <a
+              href="https://telegram.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-matrix-text hover:text-matrix-primary transition-colors"
+              aria-label="Telegram"
+            >
+              <Telegram size={24} />
+            </a>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
