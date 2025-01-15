@@ -24,7 +24,7 @@ const ChatInterface = () => {
   };
 
   return (
-    <div className="w-full max-w-2xl mx-auto p-4 bg-matrix-dark/80 backdrop-blur-lg rounded-lg border border-matrix-primary/30 shadow-lg animate-fade-in">
+    <div className="w-full max-w-2xl mx-auto p-4 bg-matrix-dark/80 backdrop-blur-lg rounded-lg border border-matrix-primary/30 shadow-lg animate-fade-in font-terminal">
       <div className="h-[500px] overflow-y-auto mb-4 p-4 space-y-4">
         {messages.map((message, index) => (
           <div
@@ -38,7 +38,7 @@ const ChatInterface = () => {
                   : 'bg-matrix-primary/10 text-matrix-primary'
               } animate-fade-in`}
             >
-              <p className="font-mono">{message.text}</p>
+              <p className="font-terminal text-lg">{message.text}</p>
             </div>
           </div>
         ))}
@@ -48,7 +48,7 @@ const ChatInterface = () => {
           type="text"
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          className="flex-1 bg-matrix-dark border border-matrix-primary/30 text-matrix-text p-2 rounded-lg focus:outline-none focus:border-matrix-primary transition-colors font-mono"
+          className="flex-1 bg-matrix-dark border border-matrix-primary/30 text-matrix-text p-2 rounded-lg focus:outline-none focus:border-matrix-primary transition-colors font-terminal text-lg"
           placeholder="Enter your message..."
         />
         <button

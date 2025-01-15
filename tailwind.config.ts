@@ -13,6 +13,9 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        terminal: ['VT323', 'monospace'],
+      },
       colors: {
         matrix: {
           primary: "#00FF00",
